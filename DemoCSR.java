@@ -4,28 +4,32 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
 public class DemoCSR {
 
     public static void main(String[] args) {
 
+        // Launch browser
         WebDriver driver = new ChromeDriver();
 
+        // Load URL
         driver.get("http://leaftaps.com/opentaps/control/main");
-        
-        driver.manage().window().maximize(); //maximize the window
 
+        // Maximize window
+        driver.manage().window().maximize();
+
+        // Print page title
         System.out.println(driver.getTitle());
 
-        driver.findElement(By.id("username"))
-              .sendKeys("DemoCSR");
+        // Enter username
+        driver.findElement(By.id("username")).sendKeys("DemoCSR");
 
-        driver.findElement(By.name("PASSWORD"))
-              .sendKeys("crmsfa");
+        // Enter password
+        driver.findElement(By.name("PASSWORD")).sendKeys("crmsfa");
 
-        driver.findElement(By.className("decorativeSubmit"))
-              .click();
+        // Click login
+        driver.findElement(By.className("decorativeSubmit")).click();
 
-        //driver.quit(); // when browser session needs to be closed
+        // Close browser (optional)
+        // driver.quit();
     }
 }
