@@ -12,28 +12,37 @@ package JavaChallenge;
 
 public class SquareRoot {
 
-    public static int mySqrt(int x)
-    {
+    // Method to calculate the integer square root of a number
+    public static int mySqrt(int x) {
 
+        // Variable to store the final square root result
         int result = 0;
 
+        // Loop from 1 up to the given number x
         for (int i = 1; i <= x; i++) {
+
+            // Check if square of i is less than or equal to x
             if (i * i <= x) 
             {
-                result = i;
-            } else
+               result = i;// If condition is true, update result
+
+            } else 
+            
             {
-                break;
+               break;// If square exceeds x, exit the loop
             }
-        }
-        return result;
+        }       
+      
+        return result; // Return the integer part of the square root
     }
 
     public static void main(String[] args) {
 
-        System.out.println("Input: 4 → Output: " + mySqrt(4));
-        System.out.println("Input: 8 → Output: " + mySqrt(8));
-        
+        // Test cases
+        System.out.println("Input: 4 → Output: " + mySqrt(4)); // Expected: 2
+        System.out.println("Input: 8 → Output: " + mySqrt(8)); // Expected: 2
     }
 }
+
+
 
