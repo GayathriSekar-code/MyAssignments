@@ -1,7 +1,7 @@
-package week2.day1;
+package Assignment;  // Package declaration
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;          // Import By class for locating elements
+import org.openqa.selenium.chrome.ChromeDriver; // Import ChromeDriver to launch Chrome browser
 
 public class DemoSalesManager {
 
